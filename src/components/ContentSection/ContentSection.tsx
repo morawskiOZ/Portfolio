@@ -1,6 +1,6 @@
 import React from "react"
 import AutoCarousel from "../AutoCarousel/AutoCarousel";
-import {reactIcon, css3Icon, html5Icon, jQueryIcon, JSIcon} from "../../icons/icons"
+import {reactIcon, css3Icon, html5Icon, jQueryIcon, JSIcon, SassIcon} from "../../icons/icons"
 import "./ContentSection.scss"
 const ContentSection = () => {
 
@@ -16,7 +16,7 @@ const ContentSection = () => {
       </p>
       <h3>Web</h3>
 
-      <AutoCarousel items={[reactIcon, css3Icon, html5Icon, jQueryIcon, JSIcon]}/>
+      <AutoCarousel items={[reactIcon, css3Icon, html5Icon, jQueryIcon, JSIcon, SassIcon]}/>
       <ul>
         <li>Javascript</li>
         <li>TypeScript</li>

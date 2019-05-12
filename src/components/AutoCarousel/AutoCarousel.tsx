@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import {throttle as _throttle} from "lodash"
 import CarouselsItem from "./CarouselsItem/CarouselsItem"
 import CSSTransitionGroup from "react-transition-group/CSSTransitionGroup"
 import "./AutoCarousel.scss"
@@ -35,7 +36,6 @@ const AutoCarousel = ({ items }: AutoCarouselProps) => {
         />
       )
     }
-    debugger
     return carouselItems
   }
 
@@ -46,12 +46,13 @@ const AutoCarousel = ({ items }: AutoCarouselProps) => {
 
   const moveLeft = (itemsArray: any) => {
     setActiveElementIndex(prevActiveElementIndex =>
-      prevActiveElementIndex < 0
+     ( prevActiveElementIndex - 1) < 0
         ? itemsArray.length - 1
         : prevActiveElementIndex - 1
     )
     setDirection("left")
   }
+  const denouncedMoveLeft = _throttle(moveLeft, 1000)
 
   const moveRight = (itemsArray: any) => {
     setActiveElementIndex(
@@ -59,7 +60,6 @@ const AutoCarousel = ({ items }: AutoCarouselProps) => {
     )
     setDirection("right")
   }
-
   return (
     <div id="carousel" className="noselect">
       <div
@@ -69,9 +69,12 @@ const AutoCarousel = ({ items }: AutoCarouselProps) => {
         <i className="fi-arrow-left" />
       </div>
         <CSSTransitionGroup
+        component="div"
+        className="carouselItem-container"
           transitionName={direction}
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}
+          transitionAppearTimeout={1000}
+          transitionEnterTimeout={1000}
+          transitionLeaveTimeout={1000}
         >
           
           {generateItems(items)}

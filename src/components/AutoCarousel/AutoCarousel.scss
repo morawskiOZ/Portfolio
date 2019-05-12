@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lobster");
+@import "../../components/App/variables";
 
 body {
   background-color: #89fad0;
@@ -6,18 +7,15 @@ body {
 }
 
 #carousel {
-  position: absolute;
   height: 200px;
   width: 810px;
   margin: auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .arrow {
-  position: absolute;
   width: 30px;
   height: 30px;
   background-color: white;
@@ -28,7 +26,6 @@ body {
   font-size: 20px;
   color: #228291;
   line-height: 30px;
-  margin-top: 85px;
   z-index: 1000;
 }
 
@@ -44,19 +41,6 @@ body {
   transition: height 1s, width 1s, left 1s, margin-top 1s, line-height 1s,
     background-color 1s;
 }
-
-$level2-height: 150px;
-$level2-width: 110px;
-$level1-height: 180px;
-$level1-width: 130px;
-$level0-height: 200px;
-$level0-width: 150px;
-
-$level-2-left: 650px;
-$level-1-left: 500px;
-$level0-left: 330px;
-$level1-left: 180px;
-$level2-left: 50px;
 
 .left-enter {
   opacity: 0;
