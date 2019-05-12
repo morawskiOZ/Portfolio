@@ -1,6 +1,6 @@
 import React from "react"
 import AutoCarousel from "../AutoCarousel/AutoCarousel";
-import {reactIcon, css3Icon, html5Icon, jQueryIcon, JSIcon, SassIcon} from "../../icons/icons"
+import {reactIcon, css3Icon, html5Icon, jQueryIcon, JSIcon, SassIcon} from "../../icons/frontEndIcons"
 import "./ContentSection.scss"
 const ContentSection = () => {
 
