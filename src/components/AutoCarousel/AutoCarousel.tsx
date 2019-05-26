@@ -5,6 +5,8 @@ import CSSTransitionGroup from "react-transition-group/CSSTransitionGroup"
 import "./AutoCarousel.scss"
 import "./foundation-icon/foundation-icons.scss"
 
+// TODO add stop and go func on click, show diffrent coursor
+// add pagination, kropki ktore pokazuja aktywny projekt i maja tez setery ustawiajace a
 interface AutoCarouselProps {
   items: any
   autoRotate?: boolean
@@ -96,6 +98,7 @@ const AutoCarousel = ({ items, autoRotate }: AutoCarouselProps) => {
         transitionAppearTimeout={500}
         transitionEnterTimeout={500}
         transitionLeaveTimeout={500}
+        transitionAppear={false}
       >
         {generateItems(items)}
       </CSSTransitionGroup>

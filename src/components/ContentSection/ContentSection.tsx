@@ -1,10 +1,41 @@
 import React from "react"
-import AutoCarousel from "../AutoCarousel/AutoCarousel";
-import {reactIcon, css3Icon, html5Icon, jQueryIcon, JSIcon, SassIcon} from "../../icons/frontEndIcons"
+import AutoCarousel from "../AutoCarousel/AutoCarousel"
+import {
+  reactIcon,
+  css3Icon,
+  html5Icon,
+  jQueryIcon,
+  JSIcon,
+  SassIcon
+} from "../../icons/frontEndIcons"
+import { mongoDbIcon, nodeJSIcon } from "../../icons/backEndIcons"
+import { gitIcon, ubuntuIcon } from "../../icons/developmentIcons"
 import "./ContentSection.scss"
-const ContentSection = () => {
 
-  const itemsTest = [<div>Lol</div>,<div>Lol</div>,<div>Lol</div>,<div>Lol</div>,<div>Lol</div>,<div>Lol</div>,<div>Lol</div>,<div>Lol</div>,<div>Lol</div>,<div>Lol</div>]
+const ContentSection = () => {
+  const itemsTest = [
+    <div>Lol</div>,
+    <div>Lol</div>,
+    <div>Lol</div>,
+    <div>Lol</div>,
+    <div>Lol</div>,
+    <div>Lol</div>,
+    <div>Lol</div>,
+    <div>Lol</div>,
+    <div>Lol</div>,
+    <div>Lol</div>
+  ]
+
+  const frontEndIcons = [
+    reactIcon,
+    css3Icon,
+    html5Icon,
+    jQueryIcon,
+    JSIcon,
+    SassIcon
+  ]
+  const backEndIcons = [mongoDbIcon, nodeJSIcon]
+  const developmentIcons = [gitIcon, ubuntuIcon]
   return (
     <section>
       <p>My main area of expertise is front end development.</p>
@@ -15,8 +46,13 @@ const ContentSection = () => {
         testing with Chain/Enzyme and Karma. Occasionally I make some work
       </p>
       <h3>Web</h3>
-
-      <AutoCarousel items={[reactIcon, css3Icon, html5Icon, jQueryIcon, JSIcon, SassIcon]}/>
+      <AutoCarousel
+        items={[
+          ...frontEndIcons,
+          ...backEndIcons,
+          ...developmentIcons
+        ]}
+      />
       <ul>
         <li>Javascript</li>
         <li>TypeScript</li>

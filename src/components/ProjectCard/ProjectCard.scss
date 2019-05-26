@@ -1,0 +1,61 @@
+.projectCard {
+  width: 530px;
+  height: 320px;
+  display: grid;
+  &-picture {
+    background-position: 50% 50%;
+    background-size: contain;
+    height: 31vh;
+    background-repeat: no-repeat;
+    width: 530px;
+    height: 320px;
+    grid-column: 1 / -1;
+
+    grid-row: 1 / -1;
+  }
+
+  &-container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(530px, 1fr));
+    justify-items: center;
+    align-items: center;
+  }
+  &-title {
+  }
+  &-description {
+  }
+  &-overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(192, 192, 192, 0.8);
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    grid-template-rows: 1fr 4fr 2fr;
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    transition: transform 0.1s;
+    transform: translateY(100%);
+    visibility: hidden;
+    &--shown {
+      transform: translateY(0);
+      visibility: visible;
+    }
+  }
+  &-links {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 5px;
+  }
+  &-link {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-gap: 10px;
+  }
+  &-svg {
+    height: 25px;
+    width: 25px;
+  }
+}
