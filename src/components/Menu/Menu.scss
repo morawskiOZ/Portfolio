@@ -1,4 +1,5 @@
 .menu {
+  background-color: #5f5c6b8f;
   margin: 0;
   padding: 0;
   display: flex;
@@ -6,6 +7,42 @@
   justify-content: center;
   height: 10vh;
   min-width: 315px;
+  width: 100%;
+  grid-column: 1 / -1;
+  &-item--divider {
+    position: relative;
+    &::after {
+      content: "";
+      width: 2px;
+      background: lightgrey;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      transform: skew(-20deg);
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  &-item {
+    outline: none;
+    &::after {
+      height: 2px;
+      background: lightgrey;
+      content: "";
+      width: 0;
+      position: absolute;
+      transform: translateX(-50%);
+      transition: width 0.4s;
+      transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);
+      left: 50%;
+      margin-top: 2rem;
+    }
+    &--active::after {
+      width: 15vw;
+    }
+  }
+
   button {
     min-width: 65px;
     text-align: center;
@@ -27,37 +64,6 @@
     }
     @media screen and (min-width: 700px) {
       font-size: 1.5rem;
-    }
-    
-    &:before {
-      content: "";
-      width: 2px;
-      background: lightgrey;
-      height: 100%;
-      left: 0;
-      position: absolute;
-      transform: skew(-20deg);
-      top: 0;
-      bottom: 0;
-    }
-    &:after {
-      height: 2px;
-      background: red;
-      content: "";
-      width: 0;
-      position: absolute;
-      transform: translateX(-50%);
-      transition: width 0.4s;
-      transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);
-      left: 50%;
-      margin-top: 2rem;
-    }
-    &:hover,
-    &:focus {
-      outline: none;
-      &:after {
-        width: 15vw;
-      }
     }
   }
 }

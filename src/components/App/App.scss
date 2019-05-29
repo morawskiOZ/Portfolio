@@ -7,7 +7,11 @@
 }
 
 .appFrame {
-  display: grid
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+  &-contentSection--centered {
+    grid-column: 2
+  }
 }
 
 .container {

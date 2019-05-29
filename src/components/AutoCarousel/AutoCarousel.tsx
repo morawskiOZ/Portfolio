@@ -14,7 +14,7 @@ interface AutoCarouselProps {
 
 const AutoCarousel = ({ items, autoRotate }: AutoCarouselProps) => {
   const [activeElementIndex, setActiveElementIndex] = useState<number>(5)
-  const [direction, setDirection] = useState<string>("left")
+  const [direction, setDirection] = useState<string>("")
 
   const generateItems = itemsArray => {
     let carouselItems = []
@@ -82,7 +82,7 @@ const AutoCarousel = ({ items, autoRotate }: AutoCarouselProps) => {
   })
 
   return (
-    <div id="carousel" className="noselect">
+    <div id="carousel" className="autoCarousel noselect">
       {autoRotate! && (
         <div
           className="arrow arrow-left"
@@ -98,7 +98,7 @@ const AutoCarousel = ({ items, autoRotate }: AutoCarouselProps) => {
         transitionAppearTimeout={500}
         transitionEnterTimeout={500}
         transitionLeaveTimeout={500}
-        transitionAppear={false}
+        transitionAppear={true}
       >
         {generateItems(items)}
       </CSSTransitionGroup>

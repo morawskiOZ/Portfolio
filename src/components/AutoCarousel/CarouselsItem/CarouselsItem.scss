@@ -10,47 +10,58 @@
 .carouselItem-container{
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 800px;
   height: 100%;
   position: relative;
+  // grid-column: 2;
 
+}
+@media screen and (max-width: 800px) {
+  .carouselItem-container{
+    width: 500px;
+  }
+}
+@media screen and (max-width: 500px) {  
+  .carouselItem-container{
+    width: 270px;
+  }
 }
 
 .level-2 {
-  height: $level2-height;
-  width: $level2-width;
-  line-height: $level2-height;
-  left: $level-2-left;
-  margin-top: 25px;
+  height: var(--level2-height);
+  width: var(--level2-width);
+  line-height: var(--level2-height);
+  left: var(--level-2-left);
+  margin-top: var(--margin-top-level2);
 }
 
 .level-1 {
-  height: $level1-height;
-  width: $level1-width;
-  line-height: $level1-height;
-  left: $level-1-left;
-  margin-top: 10px;
+  height: var(--level1-height);
+  width: var(--level1-width);
+  line-height: var(--level1-height);
+  left: var(--level-1-left);
+  margin-top: var(--margin-top-level1);
 }
 
 .level0 {
-  height: $level0-height;
-  width: $level0-width;
-  line-height: $level0-height;
-  left: $level0-left;
+  height: var(--level0-height);
+  width: var(--level0-width);
+  line-height: var(--level0-height);
+  left: var(--level0-left);
 }
 
 .level1 {
-  height: $level1-height;
-  width: $level1-width;
-  line-height: $level1-height;
-  margin-top: 10px;
-  left: $level1-left;
+  height: var(--level1-height);
+  width: var(--level1-width);
+  line-height: var(--level1-height);
+  margin-top: var(--margin-top-level1);
+  left: var(--level1-left);
 }
 
 .level2 {
-  height: $level2-height;
-  width: $level2-width;
-  line-height: $level2-height;
-  margin-top: 25px;
-  left: $level2-left;
+  height: var(--level2-height);
+  width: var(--level2-width);
+  line-height: var(--level2-height);
+  margin-top: var(--margin-top-level2);
+  left: var(--level2-left);
 }
