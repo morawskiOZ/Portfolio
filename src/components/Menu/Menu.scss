@@ -1,14 +1,46 @@
+.sticky {
+& .menu-container {
+  grid-template-areas: "menu hamburger"
+}
+& .menu {
+  background-color: black;
+  color: white;
+  height: 5vh;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-around;
+  & button {
+    width: unset !important;
+    min-width: unset;
+  }
+  &-burgerMenu {
+    display: grid;
+  }
+  &-item {
+    color: #fff;
+    &::after {
+      margin-top: 0.95rem;
+    }
+    &--divider{
+      display: none;
+    }
+    &--active{
+      &::after{
+        width: 100%
+      }
+    }
+  }
+}}
 .menu {
-  background-color: #5f5c6b8f;
+  background-color: transparent;
   margin: 0;
   padding: 0;
   display: flex;
   justify-self: end;
   justify-content: center;
-  height: 10vh;
-  min-width: 315px;
+  height: 7vh;
   width: 100%;
-  grid-column: 1 / -1;
+  grid-area: menu;
   &-item--divider {
     position: relative;
     &::after {
@@ -23,7 +55,11 @@
       bottom: 0;
     }
   }
-
+  &-container {
+    display: grid;
+    grid-template-columns: auto 60px;
+    grid-template-areas: "menu menu"
+  }
   &-item {
     outline: none;
     &::after {
@@ -41,6 +77,7 @@
     &--active::after {
       width: 15vw;
     }
+    
   }
 
   button {
@@ -65,5 +102,32 @@
     @media screen and (min-width: 700px) {
       font-size: 1.5rem;
     }
+  }
+  &-burgerMenu {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    grid-area: hamburger;
+    cursor: pointer;
+    background: #fff;
+    height: 5vh;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    &--open {
+
+    }
+  }
+
+  &-bar1, &-bar2, &-bar3{
+    width: 35px;
+    height: 3px;
+    background-color: #333;
+    transition: 0.4s;
+  }
+  &-bar1 {
+    align-self: end;
+  }
+  &-bar3 {
+    align-self: start;
   }
 }

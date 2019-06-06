@@ -16,7 +16,6 @@ const MainParallax = ({ parallaxImage }: MainParallaxProps) => {
  
       <div className="mainParallax-container">
         <div className="mainParallax-image" style={inlineStyles}>
-             <Menu />
         </div>
       </div>
     </>

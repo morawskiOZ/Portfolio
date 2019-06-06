@@ -1,14 +1,15 @@
 import React from "react"
+import Sticky from "react-sticky-el"
+
 import "./App.scss"
 import Menu from "../Menu/Menu"
 import MainParallax from "../MainParallax/MainParallax"
 import parallax from "../../photo/parallax2.jpg"
-import fruits from "../../photo/fruits_small.png"
+import photoID from "../../photo/photoID.png"
+
 import ContentSection from "../ContentSection/ContentSection"
-import ProjectCard, {
-  ProjectCardProps
-} from "components/ProjectCard/ProjectCard"
-import AutoCarousel from "components/AutoCarousel/AutoCarousel";
+
+import AutoCarousel from "components/AutoCarousel/AutoCarousel"
 import {
   reactIcon,
   css3Icon,
@@ -19,57 +20,12 @@ import {
 } from "../../icons/frontEndIcons"
 import { mongoDbIcon, nodeJSIcon } from "../../icons/backEndIcons"
 import { gitIcon, ubuntuIcon } from "../../icons/developmentIcons"
+import ProjectCardContainer from "components/ProjectCardContainer/ProjectCardContainer"
+import InfoCard, { InfoLinkProps } from "components/InfoCard/InfoCard"
 
-const projects: ProjectCardProps[] = [
-  {
-    codeLink: "www.wp.pl",
-    description: "nice www",
-    id: "id1",
-    liveLink: "www.wp.pl",
-    photoURL: fruits,
-    title: "truskawki"
-  },
-  {
-    codeLink: "www.wp.pl",
-    description: "nice www",
-    id: "id1",
-    liveLink: "www.wp.pl",
-    photoURL: fruits,
-    title: "truskawki"
-  },
-  {
-    codeLink: "www.wp.pl",
-    description: "nice www",
-    id: "id1",
-    liveLink: "www.wp.pl",
-    photoURL: fruits,
-    title: "truskawki"
-  },
-  {
-    codeLink: "www.wp.pl",
-    description: "nice www",
-    id: "id1",
-    liveLink: "www.wp.pl",
-    photoURL: fruits,
-    title: "truskawki"
-  },
-  {
-    codeLink: "www.wp.pl",
-    description: "nice www",
-    id: "id1",
-    liveLink: "www.wp.pl",
-    photoURL: fruits,
-    title: "truskawki"
-  },
-  {
-    codeLink: "www.wp.pl",
-    description: "nice www",
-    id: "id1",
-    liveLink: "www.wp.pl",
-    photoURL: fruits,
-    title: "truskawki"
-  }
-]
+import { ReactComponent as HomeSvg } from "../../icons/home.svg"
+import { ReactComponent as LinkedInSvg } from "../../icons/linkedIn.svg"
+import { ReactComponent as GitHubSvg } from "../../icons/github.svg"
 
 const frontEndIcons = [
   reactIcon,
@@ -82,35 +38,51 @@ const frontEndIcons = [
 const backEndIcons = [mongoDbIcon, nodeJSIcon]
 const developmentIcons = [gitIcon, ubuntuIcon]
 
+// const stickyStyles = {
+//   backgroundColor: "black",
+// }
+const links: InfoLinkProps[] = [
+  {
+    address: "www.portfolio.pl",
+    description: "Portfolio",
+    icon: <HomeSvg />
+  },
+  {
+    address: "https://www.linkedin.com/in/piotrmorawski90/",
+    description: "LinkedIn",
+    icon: <LinkedInSvg />
+  },
+  {
+    address: "https://github.com/morawskioz",
+    description: "GitHub",
+    icon: <GitHubSvg />
+  }
+]
+
 const App = () => {
   return (
     <div className="appFrame ">
-      
+      <div className="appFrame-item--fullWidth appFrame-item--firstRow">
+        <Sticky>
+          <Menu />
+        </Sticky>
+      </div>
+
       <MainParallax parallaxImage={parallax} />
       <AutoCarousel
-        items={[
-          ...frontEndIcons,
-          ...backEndIcons,
-          ...developmentIcons
-        ]}
+        items={[...frontEndIcons, ...backEndIcons, ...developmentIcons]}
       />
       <ContentSection />
+      <ProjectCardContainer />
+      <InfoCard
+        city={"Wroclaw"}
+        email={"pm@gmail.com"}
+        fullName={"Jan Kowalksi"}
+        title={"Magik"}
+        links={links}
+        photoUrl={photoID}
+      />
 
-      <div className="projectCard-container">
-        {projects.map(
-          ({ title, codeLink, description, id, liveLink, photoURL }) => {
-            return (<ProjectCard
-              title={title}
-              codeLink={codeLink}
-              description={description}
-              key={id}
-              liveLink={liveLink}
-              photoURL={photoURL}
-              id={id}
-            />)
-          }
-        )}
-      </div>
       {/* // projects // kontakt // */}
     </div>
   )

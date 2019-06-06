@@ -9,8 +9,17 @@
 .appFrame {
   display: grid;
   grid-template-columns: 1fr 10fr 1fr;
+  grid-template-rows: 100vh repeat(10, auto);
   &-contentSection--centered {
-    grid-column: 2
+    grid-column: 2;
+  }
+  &-item {
+    &--firstRow {
+      grid-row: 1;
+    }
+    &--fullWidth {
+      grid-column: 1 / -1;
+    }
   }
 }
 

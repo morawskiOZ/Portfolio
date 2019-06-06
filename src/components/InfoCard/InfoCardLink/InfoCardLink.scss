@@ -1,0 +1,12 @@
+.InfoCardLink {
+  grid-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: start;
+  &-Svg {
+    svg {
+      height: 20px;
+      width: 20px;
+    }
+  }
+}

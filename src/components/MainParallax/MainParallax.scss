@@ -1,5 +1,5 @@
 .mainParallax-image {
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     background-attachment: fixed;
     background-position: center;
@@ -7,8 +7,9 @@
     background-size: cover;
 }
 .mainParallax-container {
+  grid-row: 1;
   grid-column: 1 / -1;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background-attachment: fixed;
   background-position: center;
