@@ -32,20 +32,22 @@ export const InfoCard = ({
   return (
     <div className="infoCard">
       <div className="infoCard-infoContainer">
-        <h3 className="infoCard-name">{fullName}</h3>
-        <h4 className="infoCard-title">{title}</h4>
-        <p className="infoCard-description">{`Miasto: ${city}`}</p>
-        <div className="infoCard-links">
-          {links.map(link => (
-            <InfoCardLink
-              address={link.address}
-              description={link.description}
-              icon={link.icon}
-            />
-          ))}
+        <div className="infoCard-photo" style={inlineStyles} />
+        <div className="infoCard-info">
+          <h3 className="infoCard-name">{fullName}</h3>
+          <h4 className="infoCard-title">{title}</h4>
+          <p className="infoCard-description">{city}</p>
+          <div className="infoCard-links">
+            {links.map(link => (
+              <InfoCardLink
+                address={link.address}
+                description={link.description}
+                icon={link.icon}
+              />
+            ))}
+          </div>
         </div>
       </div>
-      <div className="infoCard-photo" style={inlineStyles} />
     </div>
   )
 }

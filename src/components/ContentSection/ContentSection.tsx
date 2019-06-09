@@ -16,26 +16,23 @@ const ContentSection = () => {
   ]
 
   return (
-    <section className="appFrame-contentSection--centered">
-      <p>My main area of expertise is front end development.</p>
-    
+    <section className="contentSection contentSection--centered">
+      <p>Creating reusable components in React with TypeScript is my jam.</p>
+      <br />
       <p>
-        During the office hours I work mainly with TS, React, Redux and SCSS.
-        Creating reusable components is my jam, with strong emphasis on unit
-        testing with Chain/Enzyme and Karma. Occasionally I make some work in Cypress tests.
+        Everything can be tested is my motto. Unit tests with Chain/Enzyme and
+        Karma. Occasionally some work in Cypress tests.
       </p>
-      <p>Currently I am part of an agile team. We work on SAAS project in the field of 
-        enginirng simulation. Our main project is heavily dependent on multiply APIs and
-        enourmous database. Thanks to that I feel comfortable in projects of high caliber, even abstract and
-        very complicated/(synonym).
+      <br />
+      {/* <p>
+        I have experience as a member of an agile team working on a large-scale SAAS project in the field of 
+        engineering simulation.
       </p>
+      <br /> */}
       <p>
-        After office hours I try to keep up with backend technologies, Mainly doing online 
-        courses and working on my own projects. I did big online project with Next and also Express.
-        I have first experience in writing ApolloGL mutations and queries to ocmuunicate with database 
-        I created.
+        My programming role model is Dan Abramov. I follow his blog and Twitter
+        extensively.
       </p>
-    
     </section>
   )
 }
