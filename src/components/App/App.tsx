@@ -28,8 +28,9 @@ import { ReactComponent as LinkedInSvg } from "../../icons/linkedIn.svg"
 import { ReactComponent as GitHubSvg } from "../../icons/github.svg"
 import SectionsTitle from "components/SectionTitle/SectionsTitle"
 import ParallaxTitle from "components/MainParallax/ParallaxTitle/ParallaxTitle"
-import DownArrows from "components/MainParallax/DownArrows/DownArrows";
-import MenuStart from "components/MenuStart/MenuStart";
+import DownArrows from "components/MainParallax/DownArrows/DownArrows"
+import MenuStart from "components/MenuStart/MenuStart"
+import ProjectsSection from "./ProjectsSection/ProjectsSection"
 
 const frontEndIcons = [
   reactIcon,
@@ -76,14 +77,17 @@ const App = () => {
         <ParallaxTitle />
         <DownArrows />
       </MainParallax>
-      <MenuStart >
-      <AutoCarousel
-        items={[...frontEndIcons, ...backEndIcons, ...developmentIcons]}
-      />
-      <ContentSection />
+      <MenuStart>
+        <AutoCarousel
+          items={[...frontEndIcons, ...backEndIcons, ...developmentIcons]}
+        />
+        <ContentSection />
       </MenuStart>
-      {/* <SectionsTitle title={"Projects"} />
-      <ProjectCardContainer />
+      <ProjectsSection>
+        <ProjectCardContainer />
+      </ProjectsSection>
+      {/* 
+      
       <SectionsTitle title={"Contact"} />
       <InfoCard
         city={"Wroclaw"}

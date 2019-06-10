@@ -1,9 +1,9 @@
-.MenuStart {
+.ProjectsSection {
   &-container {
     position: relative;
     grid-column: 1 / -1;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 90px;
   }
   &-firstLine {
     height: 40px;
@@ -22,7 +22,7 @@
   }
   &-title {
     position: absolute;
-    left: 43%;
+    left: 40%;
     top: 34px;
   }
   &-firstDot {
@@ -64,7 +64,7 @@
     }
   }
   &-thirdLine {
-    height: 95vh;
+    height: 45vh;
     width: 10px;
     background: black;
     position: absolute;

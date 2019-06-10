@@ -4,7 +4,6 @@ import "./MenuStart.scss"
 const MenuStart = ({ children }) => {
   return (
     <>
-
     <div className="MenuStart-container">
       <div className="MenuStart-firstLine" />
       <h2 className="MenuStart-title">Intro </h2>
