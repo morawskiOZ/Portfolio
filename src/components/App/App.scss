@@ -19,7 +19,6 @@ body {
   display: grid;
   grid-template-columns: 1fr 10fr 1fr;
   grid-template-rows: 100vh repeat(10, auto);
-  grid-gap: 30px;
 
   &-item {
     &--firstRow {

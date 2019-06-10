@@ -1,0 +1,73 @@
+.MenuStart {
+  &-container {
+    position: relative;
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  &-firstLine {
+    height: 40px;
+    width: 10px;
+    background: black;
+    position: absolute;
+    left: 50%;
+  }
+  &-secondLine {
+    height: 10px;
+    width: 45vw;
+    background: black;
+    position: absolute;
+    left: 50%;
+    top:40px;
+  }
+  &-title {
+    position: absolute;
+    left: 43%;
+    top: 34px;
+  }
+  &-firstDot {
+    position: absolute;
+    left: calc(50% - 7px);
+    top: 30px;
+    height: 25px;
+    width: 25px;
+    background-color: #000;
+    border-radius: 50%;
+    &--inner{
+      height: 12px;
+      width: 12px;
+      background-color: #fff;
+      border-radius: 50%;
+      position: relative;
+      z-index: 3;
+      left: 7px;
+      top: 7px;
+    }
+  }
+  &-secondDot {
+    position: absolute;
+    left: calc(50% + 43vw);
+    top:33px;
+    height: 25px;
+    width: 25px;
+    background-color: #000;
+    border-radius: 50%;
+    &--inner{
+      height: 12px;
+      width: 12px;
+      background-color: #fff;
+      border-radius: 50%;
+      position: relative;
+      z-index: 3;
+      left: 7px;
+      top: 7px;
+    }
+  }
+  &-thirdLine {
+    height: 45vh;
+    width: 10px;
+    background: black;
+    position: absolute;
+    left: 7px;
+  }
+}

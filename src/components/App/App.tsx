@@ -29,6 +29,7 @@ import { ReactComponent as GitHubSvg } from "../../icons/github.svg"
 import SectionsTitle from "components/SectionTitle/SectionsTitle"
 import ParallaxTitle from "components/MainParallax/ParallaxTitle/ParallaxTitle"
 import DownArrows from "components/MainParallax/DownArrows/DownArrows";
+import MenuStart from "components/MenuStart/MenuStart";
 
 const frontEndIcons = [
   reactIcon,
@@ -75,12 +76,13 @@ const App = () => {
         <ParallaxTitle />
         <DownArrows />
       </MainParallax>
-      <SectionsTitle title={"Skills"} />
+      <MenuStart >
       <AutoCarousel
         items={[...frontEndIcons, ...backEndIcons, ...developmentIcons]}
       />
       <ContentSection />
-      <SectionsTitle title={"Projects"} />
+      </MenuStart>
+      {/* <SectionsTitle title={"Projects"} />
       <ProjectCardContainer />
       <SectionsTitle title={"Contact"} />
       <InfoCard
@@ -90,7 +92,7 @@ const App = () => {
         title={"Magik"}
         links={links}
         photoUrl={photoID}
-      />
+      /> */}
 
       {/* // projects // kontakt // */}
     </div>
