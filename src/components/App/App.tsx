@@ -26,7 +26,9 @@ import InfoCard, { InfoLinkProps } from "components/InfoCard/InfoCard"
 import { ReactComponent as HomeSvg } from "../../icons/home.svg"
 import { ReactComponent as LinkedInSvg } from "../../icons/linkedIn.svg"
 import { ReactComponent as GitHubSvg } from "../../icons/github.svg"
-import SectionsTitle from "components/SectionTitle/SectionsTitle";
+import SectionsTitle from "components/SectionTitle/SectionsTitle"
+import ParallaxTitle from "components/MainParallax/ParallaxTitle/ParallaxTitle"
+import DownArrows from "components/MainParallax/DownArrows/DownArrows";
 
 const frontEndIcons = [
   reactIcon,
@@ -69,15 +71,18 @@ const App = () => {
         </Sticky>
       </div>
 
-      <MainParallax parallaxImage={parallax} />
-      <SectionsTitle title={"Skills"}/>
+      <MainParallax parallaxImage={parallax}>
+        <ParallaxTitle />
+        <DownArrows />
+      </MainParallax>
+      <SectionsTitle title={"Skills"} />
       <AutoCarousel
         items={[...frontEndIcons, ...backEndIcons, ...developmentIcons]}
       />
       <ContentSection />
-      <SectionsTitle title={"Projects"}/>
+      <SectionsTitle title={"Projects"} />
       <ProjectCardContainer />
-      <SectionsTitle title={"Contact"}/>
+      <SectionsTitle title={"Contact"} />
       <InfoCard
         city={"Wroclaw"}
         email={"pm@gmail.com"}

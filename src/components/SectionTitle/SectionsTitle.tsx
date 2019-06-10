@@ -5,7 +5,7 @@ import "./SectionTitle.scss"
 const SectionsTitle = ({title}: {title: string}): ReactElement => {
   return (
     <h2 className="sectionTitle">
-      {title}
+      <span className="sectionTitle-title">{title}</span>
     </h2>
   )
 }

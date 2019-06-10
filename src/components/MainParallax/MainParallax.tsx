@@ -3,10 +3,11 @@ import "./MainParallax.scss"
 import Menu from "components/Menu/Menu";
 
 interface MainParallaxProps {
+  children: any
   parallaxImage: string
 }
 
-const MainParallax = ({ parallaxImage }: MainParallaxProps) => {
+const MainParallax = ({ parallaxImage, children }: MainParallaxProps) => {
   const inlineStyles = {
     backgroundImage: `url(${parallaxImage})`
     
@@ -16,6 +17,7 @@ const MainParallax = ({ parallaxImage }: MainParallaxProps) => {
  
       <div className="mainParallax-container">
         <div className="mainParallax-image" style={inlineStyles}>
+          {children}
         </div>
       </div>
     </>
