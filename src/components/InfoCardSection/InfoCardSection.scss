@@ -1,4 +1,4 @@
-.ProjectsSection {
+.InfoCardSection {
   &-container {
     position: relative;
     grid-column: 1 / -1;
@@ -64,7 +64,7 @@
     }
   }
   &-thirdLine {
-    height: 95vh;
+    height: 45vh;
     width: 10px;
     background: black;
     position: absolute;

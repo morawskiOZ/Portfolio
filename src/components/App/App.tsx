@@ -31,6 +31,8 @@ import ParallaxTitle from "components/MainParallax/ParallaxTitle/ParallaxTitle"
 import DownArrows from "components/MainParallax/DownArrows/DownArrows"
 import MenuStart from "components/MenuStart/MenuStart"
 import ProjectsSection from "./ProjectsSection/ProjectsSection"
+import InfoCardSection from "components/InfoCardSection/InfoCardSection"
+import Footer from "components/Footer/Footer"
 
 const frontEndIcons = [
   reactIcon,
@@ -86,19 +88,17 @@ const App = () => {
       <ProjectsSection>
         <ProjectCardContainer />
       </ProjectsSection>
-      {/* 
-      
-      <SectionsTitle title={"Contact"} />
-      <InfoCard
-        city={"Wroclaw"}
-        email={"pm@gmail.com"}
-        fullName={"Jan Kowalksi"}
-        title={"Magik"}
-        links={links}
-        photoUrl={photoID}
-      /> */}
-
-      {/* // projects // kontakt // */}
+      <InfoCardSection>
+        <InfoCard
+          city={"Wroclaw"}
+          email={"pm@gmail.com"}
+          fullName={"Jan Kowalksi"}
+          title={"Magik"}
+          links={links}
+          photoUrl={photoID}
+        />
+      </InfoCardSection>
+      <Footer />
     </div>
   )
 }

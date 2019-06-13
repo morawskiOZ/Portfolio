@@ -1,4 +1,5 @@
 .sticky {
+  z-index: 3;
 & .menu-container {
   grid-template-areas: "menu hamburger"
 }
