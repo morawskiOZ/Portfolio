@@ -1,0 +1,31 @@
+.ContactForm {
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+  &-label {
+    margin-bottom: 5px;
+  }
+  &-textArea {
+    border: 1px solid grey;
+    height: 10vh;
+    resize: none;
+    margin-bottom: 5px;
+    //min-width: 35vh;
+
+  }
+  &-textInput {
+    border: 1px solid grey;
+    margin-bottom: 5px;
+    height: 22px;
+    font-size: 0.8rem;
+    //min-width: 35vh;
+
+  }
+  &-button {
+    padding: 5px;
+    width: 70px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+
+  }
+}

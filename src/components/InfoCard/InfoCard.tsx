@@ -2,6 +2,7 @@ import React, { ReactElement } from "react"
 
 import "./InfoCard.scss"
 import InfoCardLink from "./InfoCardLink/InfoCardLink"
+import ContactForm from "components/ContactForm/ContactForm";
 
 export interface InfoLinkProps {
   icon: ReactElement
@@ -34,9 +35,9 @@ export const InfoCard = ({
       <div className="infoCard-infoContainer">
         <div className="infoCard-photo" style={inlineStyles} />
         <div className="infoCard-info">
-          <h3 className="infoCard-name">{fullName}</h3>
-          <h4 className="infoCard-title">{title}</h4>
-          <p className="infoCard-description">{city}</p>
+          <h1 className="infoCard-name">{fullName}</h1>
+          <h2 className="infoCard-title">{title}</h2>
+          <h3 className="infoCard-description">{city}</h3>
           <div className="infoCard-links">
             {links.map(link => (
               <InfoCardLink
@@ -47,6 +48,7 @@ export const InfoCard = ({
             ))}
           </div>
         </div>
+        <ContactForm />
       </div>
     </div>
   )

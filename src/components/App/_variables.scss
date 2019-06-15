@@ -27,7 +27,7 @@ $secondary-colour-green: #228291;
   --infoCardPhotoSize: 7rem;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
   :root {
     --level2-height: calc(75px/1.6);
     --level2-width: calc(110px/1.6);
@@ -47,7 +47,7 @@ $secondary-colour-green: #228291;
     --margin-top-animation-active: 15px;
   }
 }
-@media screen and (max-width: 500px) {  
+@media screen and (max-width: 800px) {  
   :root {
     --level2-height: calc(75px/2);
     --level2-width: calc(110px/2);
