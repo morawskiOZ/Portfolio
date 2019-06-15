@@ -33,6 +33,7 @@ import MenuStart from "components/MenuStart/MenuStart"
 import ProjectsSection from "./ProjectsSection/ProjectsSection"
 import InfoCardSection from "components/InfoCardSection/InfoCardSection"
 import Footer from "components/Footer/Footer"
+import ContactForm from "components/ContactForm/ContactForm"
 
 const frontEndIcons = [
   reactIcon,
@@ -91,9 +92,9 @@ const App = () => {
       <InfoCardSection>
         <InfoCard
           city={"Wroclaw"}
-          email={"pm@gmail.com"}
-          fullName={"Jan Kowalksi"}
-          title={"Magik"}
+          email={"piotrmorawski90@gmail.com"}
+          fullName={"Piotr Morawski"}
+          title={"Front-End Developer"}
           links={links}
           photoUrl={photoID}
         />

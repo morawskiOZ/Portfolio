@@ -1,60 +1,86 @@
-import React, { useState } from 'react'
+import React, { useState } from "react"
 import "./ContactForm.scss"
-import axios from 'axios'
-
-
+import axios from "axios"
 
 const ContactForm = () => {
-
   const [name, setName] = useState<string>("")
   const [message, setMessage] = useState<string>("")
   const [email, setEmail] = useState<string>("")
   const [sent, setSent] = useState<boolean>(false)
-  const [buttonText, setButtonText] = useState<string>("")
+  const [buttonText, setButtonText] = useState<string>("Send")
 
-const resetForm = () => {
-  setName("")
-  setMessage("")
-  setEmail("")
-  setSent(false)
-  setButtonText("")
-}
+  const resetForm = () => {
+    setName("")
+    setMessage("")
+    setEmail("")
+    setSent(false)
+    setButtonText("Send")
+  }
 
-  const handleSubmit = (event) =>  {
+  const handleSubmit = event => {
     event.preventDefault()
 
-    setButtonText('...sending')
-  
+    setButtonText("...sending")
+
     let data = {
-        name,
-        email,
-        message: message
+      name,
+      email,
+      message: message
     }
-    
-    axios.post('API_URI', data)
-    .then( res => {
-      setSent(true)
-      resetForm()
-    })
-    .catch( () => {
-      console.log('Message not sent')
-    })
+
+    axios
+      .post("http://localhost:4444/api/v1", data)
+      .then(res => {
+        setSent(true)
+        resetForm()
+      })
+      .catch(() => {
+        console.log("Message not sent")
+      })
   }
   return (
-    <form className="contact-form" onSubmit={handleSubmit}>
-  <label className="message" htmlFor="message-input">Your Message</label>
-  <textarea onChange={e => setMessage(e.target.value)} name="message" className="message-input" placeholder="Please write your message here" value={message} required/>
+    <form className="ContactForm" onSubmit={handleSubmit}>
+      <label className="ContactForm-label" htmlFor="message-input">
+        Your Message
+      </label>
+      <textarea
+        onChange={e => setMessage(e.target.value)}
+        name="message"
+        className="ContactForm-textArea"
+        placeholder="Please write your message here"
+        value={message}
+        required
+      />
 
-  <label className="message-name" htmlFor="message-name">Your Name</label>
-  <input onChange={e => setName(e.target.value)} name="name" className="message-name" type="text" placeholder="Your Name" value={name}/>
+      <label className="ContactForm-label" htmlFor="message-name">
+        Your Name
+      </label>
+      <input
+        onChange={e => setName(e.target.value)}
+        name="name"
+        className="ContactForm-textInput"
+        type="text"
+        placeholder="Your Name"
+        value={name}
+      />
 
-  <label className="message-email" htmlFor="message-email">Your Email</label>
-  <input onChange={(e) => setEmail(e.target.value)} name="email" className="message-email" type="email" placeholder="your@email.com" required value={email} />
+      <label className="ContactForm-label" htmlFor="message-email">
+        Your Email
+      </label>
+      <input
+        onChange={e => setEmail(e.target.value)}
+        name="email"
+        className="ContactForm-textInput"
+        type="email"
+        placeholder="your@email.com"
+        required
+        value={email}
+      />
 
-  <div className="button--container">
-      <button type="submit" className="button button-primary">{ buttonText }</button>
-  </div>
-</form>
+      <button type="submit" className="ContactForm-button">
+        {buttonText}
+      </button>
+    </form>
   )
 }
 
