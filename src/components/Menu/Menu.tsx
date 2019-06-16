@@ -1,24 +1,44 @@
-import React, { ReactElement, useState, ReactNode } from "react"
+import React, { ReactElement, useState, ReactNode, useEffect } from "react"
+import useWindowScrollPosition from '@rehooks/window-scroll-position'
+
 import "./Menu.scss"
 // podkreslenie 80% wartosci szerokkosci buttona
+// TODO:
+// 1. Burger button animation
+//
 const Menu = (): ReactElement => {
   const [activeButton, setActiveButton] = useState<number>(null)
   const [open, setOpen] = useState<boolean>(false)
+  const [isStartPosition, setIsStartPosition] = useState<boolean>(false)
   const buttonArray: any[] = [
     1,
-    "About me",
+    "Intro",
     1,
-    "Tech stack",
-    1,
+    // "Tech stack",
+    // 1,
     "Projects",
     1,
     "Info",
     1
   ]
 
+  let options = {
+    throttle: 100,
+  }
+  let position = useWindowScrollPosition(options)
+
+  useEffect(() => {
+    if (position.y === 0) {
+      setIsStartPosition(true)
+      setActiveButton(null)
+    } else {
+      setIsStartPosition(false)
+    }
+  },[position])
+
   return (
     <div className="menu-container">
-      {open && <nav className="menu">
+      {(open || isStartPosition) && <nav className="menu">
         {buttonArray.map((element, index) => {
           if (element === 1) {
             return <div className="menu-item--divider"> </div>

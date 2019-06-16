@@ -41,36 +41,36 @@ const ContactForm = () => {
   return (
     <form className="ContactForm" onSubmit={handleSubmit}>
       <label className="ContactForm-label" htmlFor="message-input">
-        Your Message
+        Message
       </label>
       <textarea
         onChange={e => setMessage(e.target.value)}
         name="message"
-        className="ContactForm-textArea"
+        className="ContactForm-textArea ContactForm-input"
         placeholder="Please write your message here"
         value={message}
         required
       />
 
       <label className="ContactForm-label" htmlFor="message-name">
-        Your Name
+        Name
       </label>
       <input
         onChange={e => setName(e.target.value)}
         name="name"
-        className="ContactForm-textInput"
+        className="ContactForm-textInput ContactForm-input"
         type="text"
         placeholder="Your Name"
         value={name}
       />
 
       <label className="ContactForm-label" htmlFor="message-email">
-        Your Email
+        Email
       </label>
       <input
         onChange={e => setEmail(e.target.value)}
         name="email"
-        className="ContactForm-textInput"
+        className="ContactForm-textInput ContactForm-input"
         type="email"
         placeholder="your@email.com"
         required

@@ -10,15 +10,14 @@
   box-sizing: border-box;
   margin: 0;
   text-decoration: none;
+  font-family: "Montserrat", sans-serif;
 }
 body {
-  font-size: 62.5%;
   font-family: "Montserrat", sans-serif;
 }
 .appFrame {
   display: grid;
-  grid-template-columns: 50px 1fr 50px;
-  grid-template-rows: 100vh repeat(10, auto);
+  grid-template-columns: 1fr 50px minmax(auto,1100px) 50px 1fr;
 
   &-item {
     &--firstRow {
@@ -28,14 +27,37 @@ body {
       grid-column: 1 / -1;
     }
   }
+  &-timeLineZone {
+    position: relative;
+    grid-column: 3;
+    & > * {
+      padding-bottom: 40px;
+    }
+  }
 }
 
 .container {
   max-width: 1000px;
   margin: 0 auto;
 }
-// @media screen and (max-width: 500px) {  
-//   .appFrame {
-//     grid-template-columns: 40px 1fr 40px;
-//   }
-// }
+@media screen and (max-width: 500px) {  
+  .appFrame {
+    h1 {
+      font-size: 1.2rem;
+    }
+    h2 {
+      font-size: 1.1rem;
+    }
+    h3 {
+      font-size: 1rem;
+    }
+  }
+}
+
+@supports (-moz-appearance:none) {
+  .appFrame {
+    &-timeLineZone {
+      display: inline-table;
+    }
+  }
+}

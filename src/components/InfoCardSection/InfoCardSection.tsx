@@ -6,16 +6,15 @@ const InfoCardSection = ({children}) => {
   return (
     <>
     <div className="InfoCardSection-container">
+      <div className="TimeLine-firstDot">
       <h2 className="InfoCardSection-title">Contact  </h2>
-      <div className="InfoCardSection-firstDot">
-        <div className="InfoCardSection-firstDot--inner" />
+        <div className="TimeLine-firstDot--inner" />
       </div>
-      <div className="InfoCardSection-secondLine" />
-      <div className="InfoCardSection-secondDot">
-        <div className="InfoCardSection-secondDot--inner" />
-        <div className="InfoCardSection-thirdLine" />
+      <div className="TimeLine-secondLine" />
+      <div className="TimeLine-secondDot">
+        <div className="TimeLine-secondDot--inner" />
       </div>
-      
+      <div className="TimeLine-thirdLine" />
     </div>
         {children}
     </>
