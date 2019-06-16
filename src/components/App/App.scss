@@ -29,6 +29,9 @@ body {
   &-timeLineZone {
     position: relative;
     grid-column: 3;
+    & > * {
+      padding-bottom: 40px;
+    }
   }
 }
 
