@@ -1,12 +1,14 @@
 .sticky {
-  z-index: 3;
+  z-index: 5;
 & .menu-container {
   grid-template-areas: "menu hamburger"
 }
 & .menu {
+
+  z-index: 5;
   background-color: black;
   color: white;
-  height: 5vh;
+  height: 70px;
   display: grid;
   grid-auto-flow: column;
   justify-content: space-around;
@@ -20,7 +22,6 @@
   &-item {
     color: #fff;
     &::after {
-      margin-top: 0.95rem;
     }
     &--divider{
       display: none;
@@ -33,20 +34,24 @@
   }
 }}
 .menu {
-  background-color: transparent;
+  &--sticky{
+    transform: none !important ;
+  }
+  z-index: 5;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-self: end;
-  justify-content: center;
-  height: 7vh;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-evenly;
+  height: 70px;
   width: 100%;
+  grid-gap: 10px;
   grid-area: menu;
   &-item--divider {
     position: relative;
     &::after {
       content: "";
-      width: 2px;
+      width: 6px;
       background: lightgrey;
       height: 100%;
       left: 0;
@@ -58,10 +63,12 @@
   }
   &-container {
     display: grid;
-    grid-template-columns: auto 60px;
+    grid-template-columns: auto 70px;
     grid-template-areas: "menu menu"
   }
   &-item {
+    position: relative;
+    font-family: "Montserrat", sans-serif;
     outline: none;
     &::after {
       height: 2px;
@@ -82,12 +89,6 @@
   }
 
   button {
-    min-width: 65px;
-    text-align: center;
-    width: 23vw !important;
-    display: flex;
-    align-items: center;
-    position: relative;
     text-transform: uppercase;
     font-weight: 900;
     font-size: 0.7rem;
@@ -111,7 +112,8 @@
     grid-area: hamburger;
     cursor: pointer;
     background: #fff;
-    height: 5vh;
+    height: 70px;
+    width: 70px;
     border-radius: 5px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     &--open {
@@ -120,8 +122,8 @@
   }
 
   &-bar1, &-bar2, &-bar3{
-    width: 35px;
-    height: 3px;
+    width: 44px;
+    height: 4px;
     background-color: #333;
     transition: 0.4s;
   }

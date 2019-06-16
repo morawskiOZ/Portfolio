@@ -1,4 +1,6 @@
-import React, { ReactElement, useState, ReactNode } from "react"
+import React, { ReactElement, useState, ReactNode, useEffect } from "react"
+import useWindowScrollPosition from '@rehooks/window-scroll-position'
+
 import "./Menu.scss"
 // podkreslenie 80% wartosci szerokkosci buttona
 const Menu = (): ReactElement => {
@@ -15,6 +17,18 @@ const Menu = (): ReactElement => {
     "Info",
     1
   ]
+
+  let options = {
+    throttle: 100,
+  }
+  let position = useWindowScrollPosition(options)
+
+  useEffect(() => {
+    if (position.y === 0) {
+      setOpen(true)
+      setActiveButton(null)
+    }
+  },[position])
 
   return (
     <div className="menu-container">

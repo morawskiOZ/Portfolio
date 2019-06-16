@@ -8,6 +8,7 @@
     font-weight: 600;
   }
   &-input {
+    font-family: "Montserrat", sans-serif;
     padding: 10px;
     border: 1px solid grey;
     border-radius: 10px;
@@ -25,10 +26,16 @@
 
   }
   &-button {
-    padding: 5px;
-    width: 70px;
+    padding: 8px;
+    width: 90px;
     border-radius: 5px;
     margin-bottom: 5px;
+    align-self: center;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    background: black;
+    font-weight: 700;
+    margin-top: 7px;
 
   }
 }
