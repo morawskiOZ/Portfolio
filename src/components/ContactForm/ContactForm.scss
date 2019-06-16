@@ -1,5 +1,4 @@
 .ContactForm {
-  font-family: "Montserrat", sans-serif;
   grid-area: form;
   display: flex;
   flex-direction: column;
@@ -8,7 +7,6 @@
     font-weight: 600;
   }
   &-input {
-    font-family: "Montserrat", sans-serif;
     padding: 10px;
     border: 1px solid grey;
     border-radius: 10px;
@@ -32,7 +30,6 @@
     margin-bottom: 5px;
     align-self: center;
     color: white;
-    font-family: "Montserrat", sans-serif;
     background: black;
     font-weight: 700;
     margin-top: 7px;

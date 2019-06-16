@@ -3,6 +3,9 @@ import useWindowScrollPosition from '@rehooks/window-scroll-position'
 
 import "./Menu.scss"
 // podkreslenie 80% wartosci szerokkosci buttona
+// TODO:
+// 1. Burger button animation
+//
 const Menu = (): ReactElement => {
   const [activeButton, setActiveButton] = useState<number>(null)
   const [open, setOpen] = useState<boolean>(false)
