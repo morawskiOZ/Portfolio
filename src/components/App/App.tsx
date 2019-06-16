@@ -71,7 +71,7 @@ const App = () => {
   return (
     <div className="appFrame ">
       <div className="appFrame-item--fullWidth appFrame-item--firstRow">
-        <Sticky className="menu--sticky"> 
+        <Sticky className="menu--sticky" topOffset={30}> 
           <Menu />
         </Sticky>
       </div>

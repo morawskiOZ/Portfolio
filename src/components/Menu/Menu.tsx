@@ -6,12 +6,13 @@ import "./Menu.scss"
 const Menu = (): ReactElement => {
   const [activeButton, setActiveButton] = useState<number>(null)
   const [open, setOpen] = useState<boolean>(false)
+  const [isStartPosition, setIsStartPosition] = useState<boolean>(false)
   const buttonArray: any[] = [
     1,
-    "About me",
+    "Intro",
     1,
-    "Tech stack",
-    1,
+    // "Tech stack",
+    // 1,
     "Projects",
     1,
     "Info",
@@ -25,14 +26,16 @@ const Menu = (): ReactElement => {
 
   useEffect(() => {
     if (position.y === 0) {
-      setOpen(true)
+      setIsStartPosition(true)
       setActiveButton(null)
+    } else {
+      setIsStartPosition(false)
     }
   },[position])
 
   return (
     <div className="menu-container">
-      {open && <nav className="menu">
+      {(open || isStartPosition) && <nav className="menu">
         {buttonArray.map((element, index) => {
           if (element === 1) {
             return <div className="menu-item--divider"> </div>

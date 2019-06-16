@@ -1,40 +1,40 @@
 .sticky {
   z-index: 5;
-& .menu-container {
-  grid-template-areas: "menu hamburger"
-}
-& .menu {
-
-  z-index: 5;
-  background-color: black;
-  color: white;
-  height: 70px;
-  display: grid;
-  grid-auto-flow: column;
-  justify-content: space-around;
-  & button {
-    width: unset !important;
-    min-width: unset;
+  & .menu-container {
+    grid-template-areas: "menu hamburger";
   }
-  &-burgerMenu {
+  & .menu {
+    z-index: 5;
+    background-color: black;
+    color: white;
+    height: 70px;
     display: grid;
-  }
-  &-item {
-    color: #fff;
-    &::after {
+    grid-auto-flow: column;
+    justify-content: space-around;
+    & button {
+      width: unset !important;
+      min-width: unset;
     }
-    &--divider{
-      display: none;
+    &-burgerMenu {
+      display: grid;
     }
-    &--active{
-      &::after{
-        width: 100%
+    &-item {
+      color: #fff;
+      &::after {
+      }
+      &--divider {
+        display: none;
+      }
+      &--active {
+        &::after {
+          width: 100%;
+        }
       }
     }
   }
-}}
+}
 .menu {
-  &--sticky{
+  &--sticky {
     transform: none !important ;
   }
   z-index: 5;
@@ -64,7 +64,7 @@
   &-container {
     display: grid;
     grid-template-columns: auto 70px;
-    grid-template-areas: "menu menu"
+    grid-template-areas: "menu menu";
   }
   &-item {
     position: relative;
@@ -85,7 +85,6 @@
     &--active::after {
       width: 15vw;
     }
-    
   }
 
   button {
@@ -117,11 +116,12 @@
     border-radius: 5px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     &--open {
-
     }
   }
 
-  &-bar1, &-bar2, &-bar3{
+  &-bar1,
+  &-bar2,
+  &-bar3 {
     width: 44px;
     height: 4px;
     background-color: #333;
