@@ -9,6 +9,13 @@
   animation: opacity 2s ease-in-out infinite;
   opacity: 1;
 }
+&-cursor {
+  &--hidden {
+    .typed-cursor {
+      display: none;
+    }
+  }
+}
 }
 @keyframes opacity {
 0% {
