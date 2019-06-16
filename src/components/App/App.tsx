@@ -7,7 +7,7 @@ import MainParallax from "../MainParallax/MainParallax"
 import parallax from "../../photo/parallax2.jpg"
 import photoID from "../../photo/photoID.png"
 
-import ContentSection from "../ContentSection/ContentSection"
+import IntroText from "../IntroText/IntroText"
 
 import AutoCarousel from "components/AutoCarousel/AutoCarousel"
 import {
@@ -29,8 +29,8 @@ import { ReactComponent as GitHubSvg } from "../../icons/github.svg"
 import SectionsTitle from "components/SectionTitle/SectionsTitle"
 import ParallaxTitle from "components/MainParallax/ParallaxTitle/ParallaxTitle"
 import DownArrows from "components/MainParallax/DownArrows/DownArrows"
-import MenuStart from "components/MenuStart/MenuStart"
-import ProjectsSection from "./ProjectsSection/ProjectsSection"
+import IntroSection from "components/IntroSection/IntroSection"
+import ProjectsSection from "../ProjectsSection/ProjectsSection"
 import InfoCardSection from "components/InfoCardSection/InfoCardSection"
 import Footer from "components/Footer/Footer"
 import ContactForm from "components/ContactForm/ContactForm"
@@ -80,25 +80,28 @@ const App = () => {
         <ParallaxTitle />
         <DownArrows />
       </MainParallax>
-      <MenuStart>
-        <AutoCarousel
-          items={[...frontEndIcons, ...backEndIcons, ...developmentIcons]}
-        />
-        <ContentSection />
-      </MenuStart>
-      <ProjectsSection>
-        <ProjectCardContainer />
-      </ProjectsSection>
-      <InfoCardSection>
-        <InfoCard
-          city={"Wroclaw"}
-          email={"piotrmorawski90@gmail.com"}
-          fullName={"Piotr Morawski"}
-          title={"Front-End Developer"}
-          links={links}
-          photoUrl={photoID}
-        />
-      </InfoCardSection>
+      <div className="appFrame-timeLineZone">
+        <div className="TimeLine-thirdLine" />
+        <IntroSection>
+          <AutoCarousel
+            items={[...frontEndIcons, ...backEndIcons, ...developmentIcons]}
+          />
+          <IntroText />
+        </IntroSection>
+        <ProjectsSection>
+          <ProjectCardContainer />
+        </ProjectsSection>
+        <InfoCardSection>
+          <InfoCard
+            city={"Wroclaw"}
+            email={"piotrmorawski90@gmail.com"}
+            fullName={"Piotr Morawski"}
+            title={"Front-End Developer"}
+            links={links}
+            photoUrl={photoID}
+          />
+        </InfoCardSection>
+      </div>
       <Footer />
     </div>
   )

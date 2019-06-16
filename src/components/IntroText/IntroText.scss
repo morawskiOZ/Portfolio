@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700,900&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Lobster");
 
-.contentSection {
+.IntroText {
   font-family: "Montserrat", sans-serif;
   // font-family: 'Roboto Slab', serif;
   // font-family: 'Open Sans', sans-serif;
@@ -19,4 +19,12 @@
   &--centered {
     grid-column: 2;
   }
+}
+@media screen and (max-width: 700px) {  
+  .IntroText{
+    p {
+    font-size: 1rem;
+  }
+  }
+  
 }

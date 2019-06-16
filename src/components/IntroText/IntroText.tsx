@@ -1,7 +1,7 @@
 import React from "react"
-import "./ContentSection.scss"
+import "./IntroText.scss"
 
-const ContentSection = () => {
+const IntroText = () => {
   const itemsTest = [
     <div>Lol</div>,
     <div>Lol</div>,
@@ -16,7 +16,7 @@ const ContentSection = () => {
   ]
 
   return (
-    <section className="contentSection contentSection--centered">
+    <section className="IntroText IntroText--centered">
       <p>Creating reusable components in React with TypeScript is my jam.</p>
       <br />
       <p>
@@ -37,4 +37,4 @@ const ContentSection = () => {
   )
 }
 
-export default ContentSection
+export default IntroText
