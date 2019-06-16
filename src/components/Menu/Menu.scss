@@ -90,7 +90,7 @@
   button {
     text-transform: uppercase;
     font-weight: 900;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     background: none;
     border: 0;
     color: black;
@@ -98,7 +98,7 @@
     padding: 0;
     justify-content: center;
     @media screen and (min-width: 500px) {
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
     @media screen and (min-width: 700px) {
       font-size: 1.5rem;
