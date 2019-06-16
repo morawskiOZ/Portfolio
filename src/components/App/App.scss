@@ -16,7 +16,7 @@ body {
 }
 .appFrame {
   display: grid;
-  grid-template-columns: 1fr minmax(auto,1100px) 1fr;
+  grid-template-columns: 1fr 50px minmax(auto,1100px) 50px 1fr;
   grid-template-rows: 100vh repeat(10, auto);
 
   &-item {

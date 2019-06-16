@@ -13,7 +13,7 @@
     box-shadow: -7px -4px 10px 1px #816262;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: auto;
-    grid-template-areas: "photo  info   form";
+    grid-template-areas: "info photo form";
     grid-gap: 40px;
   }
   &-info {
