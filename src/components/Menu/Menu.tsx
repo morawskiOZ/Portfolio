@@ -1,7 +1,6 @@
 import React, { ReactElement, useState, ReactNode, useEffect } from "react"
-import useWindowScrollPosition from '@rehooks/window-scroll-position'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
-
+import useWindowScrollPosition from "@rehooks/window-scroll-position"
+import AnchorLink from "react-anchor-link-smooth-scroll"
 
 import "./Menu.scss"
 // podkreslenie 80% wartosci szerokkosci buttona
@@ -25,7 +24,7 @@ const Menu = (): ReactElement => {
   ]
 
   let options = {
-    throttle: 100,
+    throttle: 100
   }
   let position = useWindowScrollPosition(options)
 
@@ -36,27 +35,35 @@ const Menu = (): ReactElement => {
     } else {
       setIsStartPosition(false)
     }
-  },[position])
+  }, [position])
 
   return (
     <div className="menu-container">
-      {(open || isStartPosition) && <nav className="menu">
-        {buttonArray.map((element, index) => {
-          if (element === 1) {
-            return <div className="menu-item--divider"> </div>
-          }
-          return (
-            <button
-              className={`menu-item ${activeButton === index &&
-                "menu-item--active"}`}
-              onClick={() => setActiveButton(index)}
-            >
-              <AnchorLink href={`#${element}`} offset='100'> {element}</AnchorLink>
-            </button>
-          )
-        })}
-      </nav>}
-      <div className={`menu-burgerMenu ${open ? "menu-burgerMenu--open" : ""}`} onClick={() => setOpen(!open)}>
+      {(open || isStartPosition) && (
+        <nav className="menu">
+          {buttonArray.map((element, index) => {
+            if (element === 1) {
+              return <div className="menu-item--divider"> </div>
+            }
+            return (
+              <button
+                className={`menu-item ${activeButton === index &&
+                  "menu-item--active"}`}
+                onClick={() => setActiveButton(index)}
+              >
+                <AnchorLink href={`#${element}`} offset="100">
+                  {" "}
+                  {element}
+                </AnchorLink>
+              </button>
+            )
+          })}
+        </nav>
+      )}
+      <div
+        className={`menu-burgerMenu ${open ? "menu-burgerMenu--open" : ""}`}
+        onClick={() => setOpen(!open)}
+      >
         <div className="menu-bar1" key="b1" />
         <div className="menu-bar2" key="b2" />
         <div className="menu-bar3" key="b3" />
