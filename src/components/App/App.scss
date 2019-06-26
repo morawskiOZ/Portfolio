@@ -17,7 +17,7 @@ body {
 }
 .appFrame {
   display: grid;
-  grid-template-columns: 1fr 50px minmax(auto,1100px) 50px 1fr;
+  grid-template-columns: 1fr 50px minmax(auto, 1100px) 50px 1fr;
 
   &-item {
     &--firstRow {
@@ -34,27 +34,52 @@ body {
       padding-bottom: 40px;
     }
   }
+
+  &--paddingBottom {
+    padding-bottom: 50px;
+  }
+  &--paddingTop {
+    padding-top: 50px;
+  }
 }
 
 .container {
   max-width: 1000px;
   margin: 0 auto;
 }
-@media screen and (max-width: 500px) {  
+
+@media screen and (max-width: 1100px) {
   .appFrame {
-    h1 {
-      font-size: 1.2rem;
+    &--paddingBottom {
+      padding-bottom: 50px;
     }
-    h2 {
-      font-size: 1.1rem;
+    &--paddingTop {
+      padding-top: 50px;
     }
-    h3 {
-      font-size: 1rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .appFrame {
+    &--paddingBottom {
+      padding-bottom: 40px;
+    }
+    &--paddingTop {
+      padding-top: 40px;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .appFrame {
+    &--paddingBottom {
+      padding-bottom: 20px;
+    }
+    &--paddingTop {
+      padding-top: 20px;
     }
   }
 }
 
-@supports (-moz-appearance:none) {
+@supports (-moz-appearance: none) {
   .appFrame {
     &-timeLineZone {
       display: inline-table;

@@ -13,12 +13,18 @@
   width: 800px;
   height: 100%;
   position: relative;
+  padding: 100px 0 100px 0;
   // grid-column: 2;
 
 }
 @media screen and (max-width: 1200px) {
   .carouselItem-container{
     width: 440px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .carouselItem-container{
+    padding: 50px 0 50px 0;
   }
 }
 @media screen and (max-width: 500px) {  

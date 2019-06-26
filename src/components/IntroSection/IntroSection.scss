@@ -16,5 +16,8 @@
 @media screen and (max-width: 1000px) {  
   .IntroSection {
     grid-template-columns: 40px 1fr 40px;
+    &-container {
+      margin-bottom: 50px;
+    }
   }
 }
