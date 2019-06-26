@@ -10,7 +10,7 @@ export interface ProjectCardProps {
   title: string
   photoURL: string
   description: string
-  liveLink: string
+  liveLink?: string
   codeLink: string
   id: string
 }
@@ -41,15 +41,17 @@ const ProjectCard = ({
         <h3 className="projectCard-title">{title}</h3>
         <p className="projectCard-description">{description}</p>
         <div className="projectCard-links">
-          <a
-            className="projectCard-link"
-            href={liveLink}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <ReactSvg className="projectCard-svg" />
-            <p>Live link</p>
-          </a>
+          {liveLink && (
+            <a
+              className="projectCard-link"
+              href={liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ReactSvg className="projectCard-svg" />
+              <p>Live link</p>
+            </a>
+          )}
           <a
             className="projectCard-link"
             href={codeLink}
