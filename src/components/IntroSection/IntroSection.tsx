@@ -2,7 +2,7 @@ import React from "react"
 import "./IntroSection.scss"
 import "../TimeLine/TimeLine.scss"
 
-const IntroSection = ({ children }) => {
+const IntroSection = ({ children, id }) => {
   var body = document.body,
     html = document.documentElement
 
@@ -18,7 +18,7 @@ const IntroSection = ({ children }) => {
 
   return (
     <>
-      <div className="IntroSection-container">
+      <div className="IntroSection-container" id={id}>
         <div className="TimeLine-firstLine" />
         
         <div className="TimeLine-firstDot">

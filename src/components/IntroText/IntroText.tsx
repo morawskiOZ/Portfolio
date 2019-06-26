@@ -16,7 +16,7 @@ const IntroText = () => {
   ]
 
   return (
-    <section className="IntroText IntroText--centered appFrame--paddingBottom appFrame--paddingTop">
+    <section className="IntroText IntroText--centered appFrame--paddingBottom appFrame--paddingTop" >
       <p>Creating reusable components in React with TypeScript is my jam.</p>
       <br />
       <p>

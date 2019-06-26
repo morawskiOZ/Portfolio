@@ -1,5 +1,7 @@
 import React, { ReactElement, useState, ReactNode, useEffect } from "react"
 import useWindowScrollPosition from '@rehooks/window-scroll-position'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+
 
 import "./Menu.scss"
 // podkreslenie 80% wartosci szerokkosci buttona
@@ -49,7 +51,7 @@ const Menu = (): ReactElement => {
                 "menu-item--active"}`}
               onClick={() => setActiveButton(index)}
             >
-              {element}
+              <AnchorLink href={`#${element}`} offset='100'> {element}</AnchorLink>
             </button>
           )
         })}

@@ -78,20 +78,20 @@ const App = () => {
 
       <MainParallax parallaxImage={parallax}>
         <ParallaxTitle />
-        <DownArrows />
+        <DownArrows href={"#Intro"}/>
       </MainParallax>
       <div className="appFrame-timeLineZone">
         <div className="TimeLine-thirdLine" />
-        <IntroSection>
+        <IntroSection id={"Intro"}>
           <AutoCarousel
             items={[...frontEndIcons, ...backEndIcons, ...developmentIcons]}
           />
-          <IntroText />
+          <IntroText/>
         </IntroSection>
-        <ProjectsSection>
+        <ProjectsSection id={"Projects"}>
           <ProjectCardContainer />
         </ProjectsSection>
-        <InfoCardSection>
+        <InfoCardSection id={"Info"}>
           <InfoCard
             city={"Wroclaw"}
             email={"piotrmorawski90@gmail.com"}
