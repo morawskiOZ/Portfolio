@@ -1,8 +1,7 @@
+import ContactForm from "components/ContactForm/ContactForm"
 import React, { ReactElement } from "react"
-
 import "./InfoCard.scss"
 import InfoCardLink from "./InfoCardLink/InfoCardLink"
-import ContactForm from "components/ContactForm/ContactForm";
 
 export interface InfoLinkProps {
   icon: ReactElement
@@ -44,6 +43,7 @@ export const InfoCard = ({
                 address={link.address}
                 description={link.description}
                 icon={link.icon}
+                key={link.description}
               />
             ))}
           </div>

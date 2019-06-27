@@ -1,6 +1,6 @@
+import axios from "axios"
 import React, { useState } from "react"
 import "./ContactForm.scss"
-import axios from "axios"
 
 const ContactForm = () => {
   const [name, setName] = useState<string>("")
@@ -13,7 +13,6 @@ const ContactForm = () => {
     setName("")
     setMessage("")
     setEmail("")
-    setSent(false)
     setButtonText("Send")
   }
 
@@ -77,9 +76,13 @@ const ContactForm = () => {
         value={email}
       />
 
-      <button type="submit" className="ContactForm-button">
-        {buttonText}
-      </button>
+      {sent ? (
+        <p className="ContactForm-message">Message has been sent!  Thank you!</p>
+      ) : (
+        <button type="submit" className="ContactForm-button">
+          {buttonText}
+        </button>
+      )}
     </form>
   )
 }

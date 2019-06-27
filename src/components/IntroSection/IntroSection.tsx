@@ -1,21 +1,8 @@
 import React from "react"
-import "./IntroSection.scss"
 import "../TimeLine/TimeLine.scss"
+import "./IntroSection.scss"
 
 const IntroSection = ({ children, id }) => {
-  var body = document.body,
-    html = document.documentElement
-
-  let scrollHeight = Math.max(
-    document.body.scrollHeight,
-    document.documentElement.scrollHeight,
-    document.body.offsetHeight,
-    document.documentElement.offsetHeight,
-    document.body.clientHeight,
-    document.documentElement.clientHeight
-  )
-
-  console.log(scrollHeight)
 
   return (
     <>

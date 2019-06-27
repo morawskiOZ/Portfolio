@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react"
-
+import React, { useEffect, useRef } from "react"
 import Typed from "typed.js"
 import "./ParallaxTitle.scss"
 
 const ParallaxTitle = () => {
-  let typed
+  let typed = useRef(null)
 
   useEffect(() => {
     var options = {
@@ -15,10 +14,10 @@ const ParallaxTitle = () => {
       showCursor: false
     }
 
-    typed = new Typed(".parallaxTitle", options)
+    typed.current = new Typed(".parallaxTitle", options)
   }, [])
 
-  return <div className="parallaxTitle">{typed}</div>
+  return <div className="parallaxTitle">{typed.current}</div>
 }
 
 export default ParallaxTitle
