@@ -3,10 +3,7 @@ import useWindowScrollPosition from "@rehooks/window-scroll-position"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 
 import "./Menu.scss"
-// podkreslenie 80% wartosci szerokkosci buttona
-// TODO:
-// 1. Burger button animation
-//
+
 const Menu = (): ReactElement => {
   const [activeButton, setActiveButton] = useState<number>(null)
   const [open, setOpen] = useState<boolean>(false)
@@ -27,7 +24,7 @@ const Menu = (): ReactElement => {
     throttle: 100
   }
   let position = useWindowScrollPosition(options)
-  
+
   useEffect(() => {
     if (position.y === 0) {
       setIsStartPosition(true)
@@ -36,7 +33,6 @@ const Menu = (): ReactElement => {
       setIsStartPosition(false)
     }
   }, [position])
-
 
   return (
     <div className="menu-container">
@@ -64,9 +60,18 @@ const Menu = (): ReactElement => {
         className={`menu-burgerMenu ${open ? "menu-burgerMenu--open" : ""}`}
         onClick={() => setOpen(!open)}
       >
-        <div className={`menu-bar1 ${open ? "menu-bar1--open" : ""}`} key="b1" />
-        <div className={`menu-bar2 ${open ? "menu-bar2--open" : ""}`} key="b2" />
-        <div className={`menu-bar3 ${open ? "menu-bar3--open" : ""}`} key="b3" />
+        <div
+          className={`menu-bar1 ${open ? "menu-bar1--open" : ""}`}
+          key="b1"
+        />
+        <div
+          className={`menu-bar2 ${open ? "menu-bar2--open" : ""}`}
+          key="b2"
+        />
+        <div
+          className={`menu-bar3 ${open ? "menu-bar3--open" : ""}`}
+          key="b3"
+        />
       </div>
     </div>
   )
