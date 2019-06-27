@@ -43,6 +43,13 @@
     background: black;
     font-weight: 700;
     margin-top: 7px;
+    outline: none;
+    &:focus {
+      box-shadow: 0 0 11px #000704;
+    }
+    &:hover {
+      box-shadow: 0 0 5px #000704;
+    }
   }
   &-message {
     margin: 0 auto;
