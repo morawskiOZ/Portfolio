@@ -34,6 +34,9 @@ const Menu = (): ReactElement => {
     } else {
       setIsStartPosition(false)
     }
+    if (activeButton) {
+      setActiveButton(null)
+    }
   },[position])
 
   return (
