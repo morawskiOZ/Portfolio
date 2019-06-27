@@ -71,27 +71,27 @@ const App = () => {
   return (
     <div className="appFrame ">
       <div className="appFrame-item--fullWidth appFrame-item--firstRow">
-        <Sticky className="menu--sticky" topOffset={30}> 
+        <Sticky className="menu--sticky" topOffset={30}>
           <Menu />
         </Sticky>
       </div>
 
       <MainParallax parallaxImage={parallax}>
         <ParallaxTitle />
-        <DownArrows />
+        <DownArrows href={"#Intro"} />
       </MainParallax>
       <div className="appFrame-timeLineZone">
         <div className="TimeLine-thirdLine" />
-        <IntroSection>
+        <IntroSection id={"Intro"}>
           <AutoCarousel
             items={[...frontEndIcons, ...backEndIcons, ...developmentIcons]}
           />
           <IntroText />
         </IntroSection>
-        <ProjectsSection>
+        <ProjectsSection id={"Projects"}>
           <ProjectCardContainer />
         </ProjectsSection>
-        <InfoCardSection>
+        <InfoCardSection id={"Info"}>
           <InfoCard
             city={"Wroclaw"}
             email={"piotrmorawski90@gmail.com"}
