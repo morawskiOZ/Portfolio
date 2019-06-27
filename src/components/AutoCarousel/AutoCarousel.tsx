@@ -73,7 +73,7 @@ const AutoCarousel = ({ items, autoRotate }: AutoCarouselProps) => {
     }
     moveRight(items)
   }
-      // TODO add when user scrolls to this part, it stars moving
+  // TODO add when user scrolls to this part, it stars moving
   useEffect(() => {
     const autoRotateInterval = setInterval(autoTurn, 1500)
     return () => {
@@ -82,31 +82,30 @@ const AutoCarousel = ({ items, autoRotate }: AutoCarouselProps) => {
   })
 
   return (
-    <div id="carousel" className="autoCarousel noselect">
-      {autoRotate! && (
-        <div
-          className="arrow arrow-left"
-          onClick={() => moveLeft(items)}
+    <div>
+      <div id="carousel" className="autoCarousel noselect">
+        {autoRotate! && (
+          <div className="arrow arrow-left" onClick={() => moveLeft(items)}>
+            <i className="fi-arrow-left" />
+          </div>
+        )}
+        <CSSTransitionGroup
+          component="div"
+          className="carouselItem-container"
+          transitionName={direction}
+          transitionAppearTimeout={500}
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={500}
+          transitionAppear={true}
         >
-          <i className="fi-arrow-left" />
-        </div>
-      )}
-      <CSSTransitionGroup
-        component="div"
-        className="carouselItem-container"
-        transitionName={direction}
-        transitionAppearTimeout={500}
-        transitionEnterTimeout={500}
-        transitionLeaveTimeout={500}
-        transitionAppear={true}
-      >
-        {generateItems(items)}
-      </CSSTransitionGroup>
-      {autoRotate! && (
-        <div className="arrow arrow-right" onClick={() => moveRight(items)}>
-          <i className="fi-arrow-right" />
-        </div>
-      )}
+          {generateItems(items)}
+        </CSSTransitionGroup>
+        {autoRotate! && (
+          <div className="arrow arrow-right" onClick={() => moveRight(items)}>
+            <i className="fi-arrow-right" />
+          </div>
+        )}
+      </div>
     </div>
   )
 }
