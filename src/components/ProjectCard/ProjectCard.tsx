@@ -1,9 +1,6 @@
-// on hover show sup the project descpription
-// link to live and code
-
 import React, { useState } from "react"
-import { ReactComponent as ReactSvg } from "../../icons/www.svg"
 import { ReactComponent as GitHubSvg } from "../../icons/github.svg"
+import { ReactComponent as ReactSvg } from "../../icons/www.svg"
 import "./ProjectCard.scss"
 
 export interface ProjectCardProps {
@@ -24,18 +21,28 @@ const ProjectCard = ({
   id
 }: ProjectCardProps) => {
   const [isHovered, setIsHovered] = useState<boolean>(false)
+  const [isClicked, setIsClicked] = useState<boolean>(false)
 
   const inlineStyle = { backgroundImage: `url(${photoURL})` }
   return (
     <div
+      id={title}
+      key={title}
       className="projectCard"
-      onMouseEnter={() => setIsHovered(prevState => !prevState)}
-      onMouseLeave={() => setIsHovered(prevState => !prevState)}
+      onClick={() => {
+        isHovered && setIsHovered(false)
+        setIsClicked(prevState => !prevState)
+      }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => {
+        setIsClicked(false)
+        setIsHovered(false)
+      }}
     >
       <div className="projectCard-picture" style={inlineStyle} />
       <div
         className={`projectCard-overlay ${
-          isHovered ? "projectCard-overlay--shown" : ""
+          isHovered || isClicked ? "projectCard-overlay--shown" : ""
         }`}
       >
         <h3 className="projectCard-title">{title}</h3>
