@@ -1,7 +1,6 @@
-import React, { ReactElement, useState, ReactNode, useEffect } from "react"
 import useWindowScrollPosition from "@rehooks/window-scroll-position"
+import React, { ReactElement, useEffect, useState } from "react"
 import AnchorLink from "react-anchor-link-smooth-scroll"
-
 import "./Menu.scss"
 
 const Menu = (): ReactElement => {

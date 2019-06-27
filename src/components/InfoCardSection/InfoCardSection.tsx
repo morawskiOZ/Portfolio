@@ -1,4 +1,4 @@
-import React, { ReactElement, Component } from "react"
+import React from "react"
 import "./InfoCardSection.scss"
 
 const InfoCardSection = ({ children, id }) => {

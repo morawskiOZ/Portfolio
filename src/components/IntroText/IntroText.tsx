@@ -2,19 +2,6 @@ import React from "react"
 import "./IntroText.scss"
 
 const IntroText = () => {
-  const itemsTest = [
-    <div>Lol</div>,
-    <div>Lol</div>,
-    <div>Lol</div>,
-    <div>Lol</div>,
-    <div>Lol</div>,
-    <div>Lol</div>,
-    <div>Lol</div>,
-    <div>Lol</div>,
-    <div>Lol</div>,
-    <div>Lol</div>
-  ]
-
   return (
     <section className="IntroText IntroText--centered appFrame--paddingBottom appFrame--paddingTop">
       <p>Creating reusable components in React with TypeScript is my jam.</p>

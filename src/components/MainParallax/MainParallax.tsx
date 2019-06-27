@@ -1,6 +1,5 @@
 import React from "react"
 import "./MainParallax.scss"
-import Menu from "components/Menu/Menu";
 
 interface MainParallaxProps {
   children: any
@@ -10,11 +9,9 @@ interface MainParallaxProps {
 const MainParallax = ({ parallaxImage, children }: MainParallaxProps) => {
   const inlineStyles = {
     backgroundImage: `url(${parallaxImage})`
-    
   }
   return (
     <>
- 
       <div className="mainParallax-container">
         <div className="mainParallax-image" style={inlineStyles}>
           {children}
