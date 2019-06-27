@@ -70,6 +70,9 @@
     position: relative;
     font-family: "Montserrat", sans-serif;
     outline: none;
+    a {
+      padding: 20px;
+    }
     &::after {
       height: 2px;
       background: lightgrey;
@@ -129,8 +132,19 @@
   }
   &-bar1 {
     align-self: end;
+    &--open {
+      transform: rotate(-45deg) translate(-10px, 10px);
+    }
+  }
+  &-bar2 {
+    &--open {
+      opacity: 0;
+    }
   }
   &-bar3 {
     align-self: start;
+    &--open {
+      transform: rotate(45deg) translate(-10px, -10px);
+    }
   }
 }
