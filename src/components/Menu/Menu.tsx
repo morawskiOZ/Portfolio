@@ -40,13 +40,16 @@ const Menu = (): ReactElement => {
         <nav className="menu">
           {buttonArray.map((element, index) => {
             if (element === 1) {
-              return <div className="menu-item--divider"> </div>
+              return (
+                <div className="menu-item--divider" key={`divider${index}`} />
+              )
             }
             return (
               <button
                 className={`menu-item ${activeButton === index &&
                   "menu-item--active"}`}
                 onClick={() => setActiveButton(index)}
+                key={element}
               >
                 <AnchorLink href={`#${element}`} offset="100">
                   {element}
