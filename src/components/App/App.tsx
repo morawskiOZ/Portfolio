@@ -42,7 +42,7 @@ const developmentIcons = [gitIcon, ubuntuIcon]
 
 const links: InfoLinkProps[] = [
   {
-    address: "www.portfolio.pl",
+    address: "#",
     description: "Portfolio",
     icon: <HomeSvg />
   },
