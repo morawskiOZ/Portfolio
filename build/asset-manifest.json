@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b3040293.chunk.css",
+    "main.js": "/static/js/main.77e3ef2d.chunk.js",
+    "main.js.map": "/static/js/main.77e3ef2d.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.9a100f61.chunk.js": "/static/js/2.9a100f61.chunk.js",
+    "static/js/2.9a100f61.chunk.js.map": "/static/js/2.9a100f61.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.51c251ae66163dc97191e082e4332426.js": "/precache-manifest.51c251ae66163dc97191e082e4332426.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.b3040293.chunk.css.map": "/static/css/main.b3040293.chunk.css.map",
+    "static/media/batman.png": "/static/media/batman.a354edfd.png",
+    "static/media/express.png": "/static/media/express.d2705554.png",
+    "static/media/foundation-icons.scss": "/static/media/foundation-icons.e20945d7.ttf",
+    "static/media/fruits.png": "/static/media/fruits.eba424ba.png",
+    "static/media/gameOfLife.jpg": "/static/media/gameOfLife.0b1a4ddf.jpg",
+    "static/media/github.3747f88f.svg": "/static/media/github.3747f88f.svg",
+    "static/media/home.996e22ce.svg": "/static/media/home.996e22ce.svg",
+    "static/media/linkedIn.5b238434.svg": "/static/media/linkedIn.5b238434.svg",
+    "static/media/parallax2.jpg": "/static/media/parallax2.d0941f3b.jpg",
+    "static/media/photoID.png": "/static/media/photoID.1c2fb2e1.png",
+    "static/media/portfolio.jpg": "/static/media/portfolio.7ecd5f61.jpg",
+    "static/media/prime.png": "/static/media/prime.3199c945.png",
+    "static/media/www.604b8405.svg": "/static/media/www.604b8405.svg"
+  }
+}
