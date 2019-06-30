@@ -28,7 +28,7 @@ const ContactForm = () => {
     }
 
     axios
-      .post("http://localhost:4444/api/v1", data)
+      .post("api/v1", data)
       .then(res => {
         setSent(true)
         resetForm()
@@ -77,7 +77,7 @@ const ContactForm = () => {
       />
 
       {sent ? (
-        <p className="ContactForm-message">Message has been sent!  Thank you!</p>
+        <p className="ContactForm-message">Message has been sent! Thank you!</p>
       ) : (
         <button type="submit" className="ContactForm-button">
           {buttonText}
