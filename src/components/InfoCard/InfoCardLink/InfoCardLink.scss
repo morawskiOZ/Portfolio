@@ -3,6 +3,10 @@
   display: grid;
   grid-template-columns: repeat(3, auto);
   justify-content: start;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
   &-Svg {
     svg {
       height: 20px;

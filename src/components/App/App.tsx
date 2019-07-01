@@ -21,7 +21,7 @@ import {
 import { ReactComponent as GitHubSvg } from "../../icons/github.svg"
 import { ReactComponent as HomeSvg } from "../../icons/home.svg"
 import { ReactComponent as LinkedInSvg } from "../../icons/linkedIn.svg"
-import parallax from "../../photo/parallax2.jpg"
+import parallax from "../../photo/parallax3.jpg"
 import photoID from "../../photo/photoID.png"
 import IntroText from "../IntroText/IntroText"
 import MainParallax from "../MainParallax/MainParallax"

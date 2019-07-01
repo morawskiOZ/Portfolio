@@ -18,12 +18,12 @@ body {
 
 a {
   text-decoration: none;
-  color: inherit
+  color: inherit;
 }
 
 a:hover {
   text-decoration: none;
-  color: inherit
+  color: inherit;
 }
 
 .appFrame {
@@ -42,7 +42,7 @@ a:hover {
     position: relative;
     grid-column: 3;
     & > * {
-      padding-bottom: 40px;
+      padding-bottom: 10px;
     }
   }
 
@@ -50,7 +50,7 @@ a:hover {
     padding-bottom: 50px;
   }
   &--paddingTop {
-    padding-top: 50px;
+    padding-top: 0;
   }
 }
 
@@ -59,37 +59,19 @@ a:hover {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (min-width: 1000px) {
   .appFrame {
-    &--paddingBottom {
-      padding-bottom: 50px;
-    }
     &--paddingTop {
-      padding-top: 50px;
+      padding-top: 10px;
     }
-  }
-}
-@media screen and (max-width: 700px) {
-  .appFrame {
-    &--paddingBottom {
-      padding-bottom: 40px;
-    }
-    &--paddingTop {
-      padding-top: 40px;
-    }
-  }
-}
-@media screen and (max-width: 500px) {
-  .appFrame {
-    &--paddingBottom {
-      padding-bottom: 20px;
-    }
-    &--paddingTop {
-      padding-top: 20px;
-    }
-  }
-}
 
+    &-timeLineZone {
+      & > * {
+        padding-bottom: 30px;
+      }
+    }
+  }
+}
 @supports (-moz-appearance: none) {
   .appFrame {
     &-timeLineZone {

@@ -7,7 +7,7 @@ const IntroText = () => {
       <p>Creating reusable components in React with TypeScript is my jam.</p>
       <br />
       <p>
-        Everything can be tested is my motto. Unit tests with Chain/Enzyme and
+        Everything can be tested is my motto. Unit tests with Chai/Enzyme and
         Karma. Occasionally some work in Cypress tests.
       </p>
       <br />

@@ -1,24 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,700,900&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Lobster");
 
 .IntroText {
   font-family: "Montserrat", sans-serif;
-  // font-family: 'Roboto Slab', serif;
-  // font-family: 'Open Sans', sans-serif;
-  // font-family: 'Titillium Web', sans-serif;
-  // font-family: "calluna", serif;
   p {
     font-size: 1.5rem;
   }
-
   &--centered {
     grid-column: 2;
   }
 }
+
 @media screen and (max-width: 700px) {
   .IntroText {
     p {
@@ -35,6 +26,7 @@
     margin: 0 auto;
   }
 }
+
 @media screen and (max-width: 700px) {
   .IntroText {
     max-width: 500px;
