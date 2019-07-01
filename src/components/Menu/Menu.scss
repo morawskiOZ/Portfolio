@@ -20,7 +20,8 @@
     }
     &-item {
       color: #fff;
-      &::after {
+      &:hover {
+      color: #fff;
       }
       &--divider {
         display: none;
@@ -73,6 +74,9 @@
     outline: none;
     &:hover{
       color: black;
+    }
+    &:focus{
+      color: white;
     }
     a {
       padding: 20px;
