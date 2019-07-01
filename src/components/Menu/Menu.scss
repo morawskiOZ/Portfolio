@@ -67,9 +67,13 @@
     grid-template-areas: "menu menu";
   }
   &-item {
+    color:white;
     position: relative;
     font-family: "Montserrat", sans-serif;
     outline: none;
+    &:hover{
+      color: black;
+    }
     a {
       padding: 20px;
     }
@@ -96,7 +100,6 @@
     font-size: 0.9rem;
     background: none;
     border: 0;
-    color: black;
     cursor: pointer;
     padding: 0;
     justify-content: center;
