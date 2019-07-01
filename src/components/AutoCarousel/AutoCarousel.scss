@@ -14,11 +14,11 @@
   overflow: hidden;
   z-index: -1; 
 }
-@media screen and (max-width: 800px) {
 
-}
 @media screen and (max-width: 500px) {  
-
+  .autoCarousel {
+    height: 130px; 
+  }
 }
 .arrow {
   width: 30px;
