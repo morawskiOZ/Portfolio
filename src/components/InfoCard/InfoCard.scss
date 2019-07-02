@@ -21,7 +21,7 @@
     align-self: center;
     justify-self: stretch;
     & > * {
-      padding: 5px;
+      padding: 4px 0px 4px 4px;
     }
   }
   &-title {
@@ -44,8 +44,37 @@
   }
 }
 
+@media (max-width: 1400px) {
+  .infoCard {
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-size: 100%;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .infoCard {
+    h1,
+    h2,
+    h3,
+    h4,
+    a {
+      font-size: 70%;
+    }
+  }
+}
 @media (max-width: 700px) {
   .infoCard {
+    h1,
+    h2,
+    h3,
+    h4,
+    a {
+      font-size: 65%;
+    }
+
     &-infoContainer {
       grid-template-columns: auto auto;
       grid-template-rows: auto auto;
@@ -54,6 +83,22 @@
         "form   form";
       grid-gap: 15px;
       padding: 20px;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .infoCard {
+    h1,
+    h2,
+    h3,
+    h4,
+    a {
+      font-size: 57%;
+    }
+    &-info {
+      & > * {
+        padding: 2px 0 2px 0;
+      }
     }
   }
 }
