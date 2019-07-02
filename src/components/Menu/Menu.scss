@@ -73,9 +73,8 @@
     a {
       padding: 20px;
       color: white;
-      &:hover{
+      &:hover {
         color: white;
-
       }
     }
     position: relative;
@@ -120,8 +119,6 @@
     width: 70px;
     border-radius: 5px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-    &--open {
-    }
   }
 
   &-bar1,
@@ -184,7 +181,7 @@
   }
 }
 
-@media(hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) {
   .menu {
     &-item {
       a {

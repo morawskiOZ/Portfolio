@@ -41,7 +41,16 @@ const App = () => {
         <ProjectsSection id={"Projects"}>
           <ProjectCardContainer />
         </ProjectsSection>
-
+        <InfoCardSection id={"Info"}>
+          <InfoCard
+            city={"Wroclaw"}
+            email={"piotrmorawski90@gmail.com"}
+            fullName={"Piotr Morawski"}
+            title={"Front-End Developer"}
+            links={links}
+            photoUrl={photoID}
+          />
+        </InfoCardSection>
       </div>
       <Footer />
     </div>

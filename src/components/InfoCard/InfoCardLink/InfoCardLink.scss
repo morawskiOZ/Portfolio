@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: repeat(3, auto);
   justify-content: start;
+  align-items: center;
   &:hover {
     cursor: pointer;
     text-decoration: underline;
