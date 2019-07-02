@@ -53,6 +53,8 @@ const AutoCarousel = ({ items, autoRotate }: AutoCarouselProps) => {
     setDirection("left")
   }
 
+  // Debounce to add when there will be direction control in carousel
+
   // const denouncedMoveLeft = _.debounce((itemsArray: any) => {
   //   setActiveElementIndex(
   //     prevActiveElementIndex => (prevActiveElementIndex + 1) % itemsArray.length
