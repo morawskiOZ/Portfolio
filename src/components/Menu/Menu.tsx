@@ -15,7 +15,7 @@ const Menu = (): ReactElement => {
     // 1,
     "Projects",
     1,
-    "Info",
+    "Contact",
     1
   ]
 
