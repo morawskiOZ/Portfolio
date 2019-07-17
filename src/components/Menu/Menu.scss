@@ -182,11 +182,22 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .menu {
-    &-item {
-      a {
+  .menu--sticky:not(.sticky) {
+    .menu {
+      &-link {
         &:hover {
           color: black;
+        }
+      }
+    }
+  }
+  .menu--sticky.sticky {
+    .menu {
+      &-item:not(.menu-item--active) {
+        .menu-link {
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
