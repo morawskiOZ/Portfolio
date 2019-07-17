@@ -50,7 +50,7 @@ const Menu = (): ReactElement => {
                 onClick={() => setActiveButton(index)}
                 key={element}
               >
-                <AnchorLink href={`#${element}`} offset="100">
+                <AnchorLink href={`#${element}`} offset="100" className="menu-link">
                   {element}
                 </AnchorLink>
               </button>
