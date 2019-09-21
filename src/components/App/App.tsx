@@ -19,13 +19,10 @@ import { frontEndIcons, backEndIcons, developmentIcons, links } from "./AppData"
 
 const App = () => {
   return (
-    <div className="appFrame ">
-      <div className="appFrame-item--fullWidth appFrame-item--firstRow">
-        <Sticky className="menu--sticky" topOffset={30}>
-          <Menu />
-        </Sticky>
-      </div>
-
+    <>
+      <Sticky className="menu--sticky" topOffset={30}>
+        <Menu />
+      </Sticky>
       <MainParallax parallaxImage={parallax}>
         <ParallaxTitle />
         <DownArrows href={"#Intro"} />
@@ -53,7 +50,7 @@ const App = () => {
         </InfoCardSection>
       </div>
       <Footer />
-    </div>
+    </>
   )
 }
 

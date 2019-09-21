@@ -23,17 +23,6 @@ a:hover {
 }
 
 .appFrame {
-  display: grid;
-  grid-template-columns: 1fr 5fr minmax(auto,1100px) 5fr 1fr;
-
-  &-item {
-    &--firstRow {
-      grid-row: 1;
-    }
-    &--fullWidth {
-      grid-column: 1 / -1;
-    }
-  }
   &-timeLineZone {
     position: relative;
     grid-column: 3;
