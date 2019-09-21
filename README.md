@@ -30,3 +30,5 @@ Simmply go to: https://piotrmorawski.herokuapp.com/
 - 1.2.0 - Styling adjustments
 - 1.3.0 - Responsiveness adjustments
 - 1.3.1 - Fix menu link hover color
+- 1.3.2 - Fix grid flickering and text max-width for HD
+
