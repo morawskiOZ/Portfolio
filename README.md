@@ -1,10 +1,11 @@
 # Portfolio
 
+## Important!
+This is now a legacy project, portfolio was migrated to Gatasby and Netlify in the [new repository](https://github.com/morawskiOZ/Portfolio_Gatsby). It will not be mainained and might go offline soon. 
+
 ## Info
 
 My landing page to show some of my programming skills. Written in TypeScript with React. Main goal was to create reusable components with individual styling. I used the newest version of React 16.8 with strong emphasis on function components and hooks.
-
-First release is responsive but I will continue to work on this matter.
 
 The backend for this website is created with Node Express. I use it for server rendering and mailing. The repository for [backend](https://github.com/morawskiOZ/Node_Express_Server).
 
@@ -12,7 +13,7 @@ The project is deployed on Heroku.
 
 ## Start
 
-Simmply go to: https://piotrmorawski.herokuapp.com/
+Simmply go to: https://piotrmorawski.herokuapp.com/ - be advised that the server has a cold start time so be patient.
 
 ## Technologies
 
